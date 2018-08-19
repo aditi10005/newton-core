@@ -9,6 +9,7 @@
   "author": "Apoorv Saini",
   "license": "ISC",
   "dependencies": {
-    "faye": "^1.2.4"
+    "faye": "^1.2.4",
+    "rtc-everywhere": "0.0.5"
   }
 }
