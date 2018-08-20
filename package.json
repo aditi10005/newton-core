@@ -9,7 +9,11 @@
   "author": "Apoorv Saini",
   "license": "ISC",
   "dependencies": {
+    "easyrtc": "^1.1.0",
+    "express": "^4.16.3",
     "faye": "^1.2.4",
-    "rtc-everywhere": "0.0.5"
+    "rtc-everywhere": "0.0.5",
+    "serve-static": "^1.13.2",
+    "socket.io": "^2.1.1"
   }
 }

@@ -4,6 +4,11 @@ var fs = require('fs');
 var server = http.createServer(),
     bayeux = new faye.NodeAdapter({ mount: '/newton', timeout: 45 });
 
+var express = require("express");           // web framework external module
+var serveStatic = require('serve-static');  // serve static files
+var socketIo = require("socket.io");        // web socket external module
+var easyrtc = require("easyrtc");               // EasyRTC external module
+
 // Handle non-Bayeux requests
 var server = http.createServer(function(request, response) {
     response.writeHead(200, { 'Content-Type': 'text/plain' });
