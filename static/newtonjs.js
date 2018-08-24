@@ -9,6 +9,3 @@ let host = "http://127.0.0.1:3000";
 loadAllAcripts(host+'/js/faye.js');
 loadAllAcripts(host+'/js/socket.io.js');
 loadAllAcripts(host+'/js/easyrtc.js');
-
-loadAllAcripts(host+'/js/low_bw.js');
-loadAllAcripts(host+'/js/rates.js');

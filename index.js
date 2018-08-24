@@ -20,7 +20,7 @@ process.title = "node-easyrtc";
 // Handle non-Bayeux requests
 var app = express();
 app.use(serveStatic('static', {'index': ['index.html']}));
-app.use(serveStatic('static', {'newtonjs': ['newtonjs.js','js/socket.io.js','js/easyrtc.js','js/rates.js','js/low_bw.js','js/faye.js']}));
+app.use(serveStatic('static', {'newtonjs': ['newtonjs.js','js/socket.io.js','js/easyrtc.js','js/rates.js','js/low_bw.js','js/faye.js','test']}));
 
 var server = http.createServer(app);
 
