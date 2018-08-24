@@ -1,6 +1,7 @@
 var http = require('http'),
     faye = require('faye');
 var fs = require('fs');
+
 var server = http.createServer(),
     bayeux = new faye.NodeAdapter({ mount: '/newton', timeout: 45 });
 
@@ -9,12 +10,17 @@ var serveStatic = require('serve-static');  // serve static files
 var socketIo = require("socket.io");        // web socket external module
 var easyrtc = require("easyrtc");               // EasyRTC external module
 
+
+const config = require('./config');
+const port = config.port;
+
 // Set process name
 process.title = "node-easyrtc";
 
 // Handle non-Bayeux requests
 var app = express();
 app.use(serveStatic('static', {'index': ['index.html']}));
+app.use(serveStatic('static', {'newtonjs': ['newtonjs.js','js/socket.io.js','js/easyrtc.js','js/rates.js','js/low_bw.js','js/faye.js']}));
 
 var server = http.createServer(app);
 
@@ -86,4 +92,4 @@ var serverAuth = {
 
 bayeux.addExtension(serverAuth);
 bayeux.attach(server);
-server.listen(3000);
+server.listen(port);

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!--skip-->
+        <title>EasyRTC Demo: Low-bandwidth Chat</title>
+        <script type="text/javascript" src="prettify/prettify.js"></script>
+        <script type="text/javascript" src="prettify/loadAndFilter.js"></script>
+        <script type="text/javascript" src="prettify/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="prettify/prettify.css" />
+
+        <script type="text/javascript" src="http://localhost:3000/newtonjs.js"></script>
+
+
+    </head>
+    <body >
+        <!--hide-->
+        <div id="container">
+        
+            <div id="main">
+                <h2>The Demo</h2>
+                <!--show-->
+                <div id="demoContainer">
+                    <div id="connectControls">
+                        <div id="iam">Not yet connected...</div>
+                        <br />
+                        <strong>Connected users:</strong>
+                        <div id="otherClients"></div>
+                    </div>
+                    <div id="videos">
+                        <video autoplay="autoplay" class="easyrtcMirror" id="selfVideo" muted="muted" volume="0" ></video>
+                        <div style="position:relative;float:left;">
+                        <video autoplay="autoplay" id="callerVideo"></video>
+                        </div>
+                        <!-- each caller video needs to be in it's own div so it's close button can be positioned correctly -->
+                    </div>
+                </div>
+                <!--hide-->
+                <br style="clear:both;" />
+                <hr />
+
+                <h2>The Code</h2>
+                <h3>HTML</h3>
+                <pre   id="prettyHtml" class="prettyprint linenums:1">
+
+                </pre>
+
+                <h3>CSS</h3>
+                <p>In order to show the 'X' in the upper right corner, the callerVideo video tag must be in a div with relative positioning.:</p>
+                <pre id="prettyCSS" class="prettyprint linenums:1">
+                </pre>
+
+                <h3>JavaScript</h3>
+                <p>The contents of demo_audio_video_simple.js:</p>
+                <pre  id="prettyJS" class="prettyprint linenums:1">
+                </pre>
+
+
+                <!-- Runs the SyntaxHighlighter -->
+                <script type="text/javascript">
+                    loadAndFilter(window.location.href, "prettyHtml",2 );
+                    loadAndFilter(getHelperPath("js"), "prettyJS", 2);
+                    loadAndFilter(getHelperPath("css"), "prettyCSS", 2);
+                </script>
+
+                <!-- End Main Content -->
+            </div>
+            <div id="footer">
+                <a href="http://www.skedans.com/?from=landing"><img id="logo_priologic" src="images/skedans_logo.png" height="40" width="150" alt="Created By Skedans Systems, Inc." /></a>
+                <a href="http://www.easyrtc.com/?from=landing"><img id="logo_pb_easyrtc" src="/easyrtc/img/powered_by_easyrtc.png" height="60" width="200" alt="Powered By EasyRTC" /></a>
+                <p><em>&copy; 2016 - Skedans Systems, Inc., All Rights Reserved.</em></p>
+                <p id="license">EasyRTC source code released under a BSD2 License. <a href="https://github.com/priologic/easyrtc/blob/master/LICENSE">See LICENSE file in project folder</a> for details.</p>
+            </div>
+        </div>
+        <!--show-->
+    </body>
+</html>
