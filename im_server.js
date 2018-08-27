@@ -39,7 +39,7 @@ var serverAuth = {
         this._fileContent = this._fileContent || fs.readFileSync('./tokens.json');
 
         var registry = JSON.parse(this._fileContent.toString());
-        var token = registry["rebound_2313"];
+        var token = registry["/app/2310h7"];
         console.log("Saved Token, " + token);
         console.log("USER Token, " + msgToken);
         console.log("Message" + JSON.stringify(message));
