@@ -1,13 +1,8 @@
 <div class="remoteStreams" ng-controller="RemoteStreamsController as rtc">
-	<h2>Remote Streams</h2>
-
 	<div id="remoteVideosContainer"></div>
-
 	<table>
     	<thead>
-    		<tr>
-        		<th>Stream</th><th>1-way</th><th>2-way</th>
-   			</tr>
+
    		</thead>
     	<tbody>
     		<tr ng-repeat="stream in rtc.remoteStreams" ng-class="{'selected' : stream.isPlaying}">

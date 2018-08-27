@@ -125,6 +125,7 @@ if (navigator.mozGetUserMedia) {
         iceServers.push(iceServer);
       }
     }
+    console.log(iceServers);
     return iceServers;
   };
 
