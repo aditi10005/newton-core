@@ -1,6 +1,5 @@
 [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
 
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg)](https://forthebadge.com)
 
 # Newton Core
 
@@ -25,3 +24,6 @@ The ports and hosts can be changed in config.js file.
 Newton Core is based on Bayeux Protocol and WebRTC.
 
 The information (and How Tos) of client SDKs will be updated soon.
+
+
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg)](https://forthebadge.com)
