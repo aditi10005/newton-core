@@ -111,13 +111,13 @@
 		//initial load
 		rtc.loadData();
     	if($location.url() != '/'){
-      		rtc.call($location.url().slice(1));
+      		rtc.view($location.url().slice(1));
     	};
 	}]);
 
 	app.controller('LocalStreamController',['camera', '$scope', '$window', function(camera, $scope, $window){
 		var localStream = this;
-		localStream.name = 'Guest';
+		localStream.name = 'admin';
 		localStream.link = '';
 		localStream.cameraIsOn = false;
 

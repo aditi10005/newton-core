@@ -6,9 +6,9 @@
    		</thead>
     	<tbody>
     		<tr ng-repeat="stream in rtc.remoteStreams" ng-class="{'selected' : stream.isPlaying}">
-        		<td><a>{{stream.name}}</a></td>
+        		<td><a href="http://localhost:3001/{{stream.id}}">http://localhost:3001/{{stream.name}}</a></td>
                 <td ng-click="rtc.view(stream)"><a>View</a></td>
-                <td ng-click="rtc.call(stream)"><a>Call</a></td>
+                <td ng-click="rtc.call(stream)"><a>Call</a></td> 
     		</tr>
 		</tbody>
 	</table>
