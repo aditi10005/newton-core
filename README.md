@@ -1,3 +1,7 @@
+[![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
+
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg)](https://forthebadge.com)
+
 # Newton Core
 
 Newton is a suite of cross-platform Real-time Communication SDKs.
