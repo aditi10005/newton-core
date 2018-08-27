@@ -3,14 +3,26 @@ var http = require('http'),
 var fs = require('fs');
 var server = http.createServer(),
     bayeux = new faye.NodeAdapter({ mount: '/newton', timeout: 45 });
-
+var serveStatic = require('serve-static');
+var finalhandler = require('finalhandler')
+;
 const config = require('./config');
 const imPort = config.imPort;
 
+// Serve client file
+var serve = serveStatic('js', {'index': ['imclient.js']});
+
 // Handle non-Bayeux requests
 var server = http.createServer(function(request, response) {
-    response.writeHead(200, { 'Content-Type': 'text/plain' });
-    response.end('Hello, non-Bayeux request');
+    if (request.url === "/")
+    {
+        serve(request, response, finalhandler(request, response));
+        return;
+    }
+    else {
+        response.writeHead(200, { 'Content-Type': 'text/plain' });
+        response.end('Hello, non-Bayeux request');
+    }
 });
 
 var serverAuth = {
