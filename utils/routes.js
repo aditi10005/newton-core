@@ -4,7 +4,7 @@ module.exports = function(app, streams) {
   var index = function(req, res) {
     res.render('index', { 
                           title: 'Project NEWTON', 
-                          header: 'Live streaming',
+                          header: 'Streams',
                           username: 'Username',
                           share: 'Share this link',
                           footer: '',

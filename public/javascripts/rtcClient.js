@@ -15,7 +15,6 @@ var PeerManager = (function () {
       },
       peerDatabase = {},
       localStream,
-      remoteVideoContainer = document.getElementById('remoteVideosContainer'),
       socket = io();
       
   socket.on('message', handleMessage);
@@ -24,6 +23,7 @@ var PeerManager = (function () {
   });
       
   function addPeer(remoteId) {
+    remoteVideoContainer = document.getElementById('remoteVideosContainer');
     var peer = new Peer(config.peerConnectionConfig, config.peerConnectionConstraints);
     peer.pc.onicecandidate = function(event) {
       if (event.candidate) {
