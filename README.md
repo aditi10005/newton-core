@@ -1,7 +1,9 @@
 # Newton Core
 
 Newton is a suite of cross-platform Real-time Communication SDKs.
-Want to add IM and Video Calling/Streaming to your apps, Newton will get you there.
+Want to add IM and Video Calling/Streaming to your apps? Newton will make it super easy.
+
+For now, you can use any WebRTC and Faye client library to connect your apps to Newton Core.
 
 Newton Core is the server that enables RTC among Android, iOS and JS (web) SDKs for Newton.
 
